@@ -50,7 +50,7 @@
                         <p>您应该在 TeamSpeak 客户端中输入这个地址，而非在网页浏览器中。<br/>
                         </p>
                         <div class="justify-end space-x-3 card-actions">
-                            <button class="btn" onclick="window.open('ts3server://ts.ouralioth.com', '_blank')">连接至服务器</button>
+                            <a class="btn btn-info" href="#server-list">连接至服务器</a>
                             <button class="btn" onclick="window.open('https://ts.wevg.org', '_blank')">了解更多</button>
 
                         </div>
@@ -122,7 +122,45 @@
                         </div>
                     </div>
                 </div>
-          
+                <div class="flex items-center p-4 shadow-xl rounded-box bg-info text-accent-content lg:col-span-2 md:col-span-2 sm:col-span-2 xs:col-span-4">
+                    <div class="flex-1 px-2">
+                        <div class="text-xl font-extrabold" id="online">加载中</div>
+                        <div class="text-opacity-80 text-sm">当前在线人数</div>
+                    </div>
+                    <div class="flex-0">
+                        <div class="dropdown dropdown-top dropdown-end">
+                            <div tabindex="0">
+                                <div class="flex space-x-1">
+                                    <button class="btn btn-ghost btn-square" aria-hidden="true">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-2xl" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center p-4 shadow-xl rounded-box bg-secondary-focus text-accent-content lg:col-span-2 md:col-span-2 sm:col-span-2 xs:col-span-4">
+                    <div class="flex-1 px-2">
+                        <p class="text-sm text-opacity-80">平均延迟/丢包</p>
+                        <h2 class="text-xl font-extrabold" style="display: contents" id="avgLatency">加载中</h2>&nbsp;
+                        <div class="stat-desc" style="display: inline" id="packageLoss"></div>
+                    </div>
+                    <div class="flex-0">
+                        <div class="dropdown dropdown-top dropdown-end">
+                            <div tabindex="0">
+                                <div class="flex space-x-1">
+                                    <button class="btn btn-ghost btn-square" aria-hidden="true">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-2xl" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <footer class="p-4 footer text-base-content footer-center">
                 <div id="footer-copyright"></div>
